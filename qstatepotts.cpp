@@ -26,7 +26,7 @@ void QStatePotts::set_beta(double &beta)
     this->beta = beta;
 }
 
-void mcstep()
+void QStatePotts::mcstep()
 {
 
 }

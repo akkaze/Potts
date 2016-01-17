@@ -6,7 +6,7 @@
 #include "boost/graph/graph_traits.hpp"
 
 using namespace boost;
-typedef adjacency_list<vecS, vecS, undirectedS> Graph;
+typedef adjacency_list<vecS, vecS, undirectedS,uint8_t> Graph;
 class QStatePotts
 {
 public:
