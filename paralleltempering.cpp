@@ -1,11 +1,12 @@
 #include "paralleltempering.h"
 
 #include <math.h>
-ParallelTempering::ParallelTempering()
+ParallelTempering::ParallelTempering(double spin_coupling, size_t num_states)
 {
+    init_beta();
     systems.reserve(num_systems);
     for(size_t idx = 0;idx < num_systems;idx++) {
-        QStatePotts* system = new QStatePotts();
+        QStatePotts* system = new QStatePotts(spin_coupling,num_states,betas[idx]);
         systems.push_back(system);
     }
     generator = new RandomGenerator(0,num_systems);

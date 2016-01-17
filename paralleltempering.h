@@ -11,7 +11,7 @@ using namespace std;
 class ParallelTempering
 {
 public:
-    ParallelTempering();
+    ParallelTempering(double spin_coupling,size_t num_states);
     ~ParallelTempering();
     void init_beta();
     void move();
